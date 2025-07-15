@@ -1,8 +1,14 @@
-# configs/vision/cifar10_debug.yaml
-name: debug
-epochs: 1
-device: cpu
-batch_size: 32
-lr: 1e-3
-num_classes: 10         
-log_dir: outputs/debug
+# ---------------------------------------------------------------------
+# Vision experiment: CIFAR‑10  IsoLoRA
+# ---------------------------------------------------------------------
+defaults:
+  - /_base               # inherit all fields from the global base
+
+name: cifar10_iso
+domain: vision
+dataset: cifar10
+batch_size: 128          # GPU‑friendly
+epochs: 90
+num_classes: 10
+lora_rank: 8
+log_dir: outputs/cifar10_iso

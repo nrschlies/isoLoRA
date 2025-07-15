@@ -1,2 +1,15 @@
-defaults:
-  - vision/cifar10_debug
+# ---------------------------------------------------------------------
+# Global defaults (load FIRST, then layer overrides on top)
+# ---------------------------------------------------------------------
+device: cuda            # "cpu", "mps", or "cuda"
+seed: 42
+log_dir: outputs/${now:%Y%m%d_%H%M%S}
+
+# Everything below mirrors TrainConfig fields — but you can omit
+# any field you’re happy to keep at its dataclass default.
+epochs: 3
+batch_size: 64
+lr: 3e-4
+weight_decay: 1e-4
+grad_clip: 1.0
+subset_size: null        # override to 256 for quick CPU tests

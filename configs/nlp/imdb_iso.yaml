@@ -1,0 +1,15 @@
+# ---------------------------------------------------------------------
+# NLP experiment: IMDb sentiment  IsoLoRA
+# ---------------------------------------------------------------------
+defaults:
+  - /_base
+
+name: imdb_iso
+domain: nlp
+dataset: imdb
+batch_size: 16
+epochs: 5
+num_classes: 2
+lora_rank: 4
+subset_size: null        # can set to 1000 for a fast dry‑run
+log_dir: outputs/imdb_iso
