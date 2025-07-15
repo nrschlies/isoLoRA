@@ -137,3 +137,6 @@ htmlcov/
 *.orig
 *.old
 *.~*
+# raw datasets
+data/
+

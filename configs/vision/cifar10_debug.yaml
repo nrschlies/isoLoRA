@@ -1,0 +1,8 @@
+# configs/vision/cifar10_debug.yaml
+name: debug
+epochs: 1
+device: cpu
+batch_size: 32
+lr: 1e-3
+num_classes: 10         
+log_dir: outputs/debug
