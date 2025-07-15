@@ -1,0 +1,139 @@
+###############################################################################
+#  IsoLoRA – Git ignore list
+#  Grouped by category for quick edits
+###############################################################################
+
+############################
+# 1. Python byte‑code & cache
+############################
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.dylib
+*.pyo
+*.pyc
+*.whl
+
+############################
+# 2. Virtual‑environment folders
+############################
+.venv/
+venv/
+.env/
+*.env                # dotenv files with secrets
+
+############################
+# 3. Packaging / build artefacts
+############################
+build/
+dist/
+.eggs/
+*.egg-info/
+*.egg
+.manifest
+pip-wheel-metadata/
+site-packages/
+
+############################
+# 4. Editor / IDE cruft
+############################
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.sw?
+*.kate-swp
+
+############################
+# 5. Operating‑system cruft
+############################
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+Icon?
+desktop.ini
+
+############################
+# 6. Logs & runtime outputs
+############################
+# Hydra default output dir
+outputs/
+# Our explicit logs & profiling
+logs/
+**/*.log
+runtime/*.txt
+runtime/*.json
+
+############################
+# 7. Experiments & results
+############################
+# Large CSV/JSON histories, tensors, figs
+experiments/*/
+results/*/
+# Keep placeholder docs if present
+!experiments/**/README*
+!results/**/README*
+!experiments/**/.gitkeep
+!results/**/.gitkeep
+
+############################
+# 8. Datasets / raw blobs
+############################
+data/raw/
+data/downloads/
+datasets/
+*.npz
+*.npy
+*.parquet
+*.h5
+*.tfrecord
+
+############################
+# 9. Model checkpoints & weights
+############################
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+
+############################
+# 10. Jupyter notebooks—aux files
+############################
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+############################
+# 11. Sphinx / MkDocs build output
+############################
+docs/_build/
+site/
+
+############################
+# 12. PyTest & coverage artefacts
+############################
+.pytest_cache/
+.coverage
+htmlcov/
+.cache/
+
+############################
+# 13. Docker / container leftovers
+############################
+*.tar
+*.img
+*.docker
+*Dockerfile.swp
+
+############################
+# 14. Misc temporary files
+############################
+*.tmp
+*.temp
+*.bak
+*.orig
+*.old
+*.~*
